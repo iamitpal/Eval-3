@@ -20,6 +20,7 @@ const Experience = ({ data }) => {
       <Link href={data.html_url}>
         <h2>{data.name}</h2>
       </Link>
+      <br />
       <h2>Experience: 1200+ Hours of Coding experience at Masai School</h2>
     </div>
   );

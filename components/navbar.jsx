@@ -1,5 +1,7 @@
-import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import profile from "../public/profile.png";
 
 const Navbar = () => {
   return (
@@ -7,16 +9,36 @@ const Navbar = () => {
       style={{
         display: "flex",
         gap: "20px",
-        justifyContent: "center",
+        justifyContent: "space-between",
         fontSize: "24px",
         padding: "8px",
         backgroundColor: "royalblue",
         color: "white",
       }}
     >
-      <Link href={"/"}>Amit Pal</Link>
-      <Link href={"/project"}>Projects</Link>
-      <Link href={"/experience"}>Experience</Link>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          justifyContent: "center",
+          fontSize: "24px",
+          padding: "8px",
+          backgroundColor: "royalblue",
+          color: "white",
+        }}
+      >
+        <Link href={"/"}>Amit Pal</Link>
+        <Link href={"/project"}>Projects</Link>
+        <Link href={"/experience"}>Experience</Link>
+      </div>
+      <Image
+        style={{ borderRadius: "50%" }}
+        src={profile}
+        width={60}
+        height={55}
+        priority
+        alt={"avatar"}
+      />
     </div>
   );
 };
