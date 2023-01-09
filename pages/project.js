@@ -12,10 +12,14 @@ const Project = ({ data }) => {
           gridTemplateColumns: "repeat(4,1fr)",
           border: "1px solid gray",
           marginTop: "12px",
+          padding: "10px",
         }}
       >
         {data.map((el) => (
-          <div style={{ border: "1px solid gray" }} key={el.id}>
+          <div
+            style={{ border: "1px solid gray", padding: "10px" }}
+            key={el.id}
+          >
             <Link href={el.html_url}>
               <h3>Repository:{el.name}</h3>
               <h3>Star Count:{el.stargazers_count}</h3>
